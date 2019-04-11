@@ -1,20 +1,27 @@
 package ProjetoCarro;
 
 public class Carro {
-    public static void main (String [] args){
         String modelo, cor, marca, proprietario, chassi;
-        int ano, nDePortas;
-        double vMaxima, vAtual, volumeCombustivel;
-        boolean tetoSola, cambio_automatico;
-        proprietario proprietario1;
+        int ano, nDePortas, nMarchas, marchaAtual;
+        double vMaxima, vAtual, vCombustivel;
+        boolean tetoSolar, cambio_automatico;
+        Proprietario proprietario;
 
         void acelera(){
             vAtual += 1;
         }
 
         void freia(){
-            vAtual
+            vAtual = 0;
         }
-
+    
+        void trocaMarcha(int marchaDesejada){
+            if(marchaDesejada > nMarchas){
+                System.out.println("Marcha Inexistente!");
+            }else marchaAtual = marchaDesejada;
+        }
+    
+        void reduzMarcha(){
+            marchaAtual -= 1;
     }
 }
